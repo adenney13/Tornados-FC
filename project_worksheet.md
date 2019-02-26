@@ -30,8 +30,12 @@ https://cloudinary.com/console/media_library/folders/all/P4%20Wireframes
 
 (For MVP)
 https://res.cloudinary.com/dvs0stnjy/image/upload/v1551213347/P4%20Priority%20Matrix/587E7961-87AD-4C17-A0DE-2F557EFE93CE.jpg
+
+
 (For Post-MVP)
 https://res.cloudinary.com/dvs0stnjy/image/upload/v1551213347/P4%20Priority%20Matrix/67071806-9C6B-47F5-A6BA-BB7EBE0549E2.jpg
+
+
 (Matrix)
 https://res.cloudinary.com/dvs0stnjy/image/upload/v1551213346/P4%20Priority%20Matrix/5F1FC66C-736B-4EE3-9C88-6591CA0D2AD4.jpg
 
