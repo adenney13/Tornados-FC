@@ -1,5 +1,6 @@
 # Project Overview
 <img src= 'https://i.imgur.com/8GfRGgU.jpg'>
+
 ## Project Schedule
 
 This schedule will be used to keep track of your progress throughout the week and align with our expectations.  
@@ -19,11 +20,11 @@ You are **responsible** for scheduling time with your squad to seek approval for
 
 ## Project Description
 
-The Torandos FC app 
+The Torandos FC app will be the source for all scheduling information for the soccer club. Whether needing the practice schedule, curious about where the team is in league standings, or if they should need to contact someone from their team, the Torandos FC App will be their go to source.
 
 ## Wireframes
 
-Upload images of wireframe to cloudinary and add the link here with a description of the specific wireframe.
+https://cloudinary.com/console/media_library/folders/all/P4%20Wireframes
 
 ## Priority Matrix
 
