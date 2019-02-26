@@ -9,13 +9,13 @@ You are **responsible** for scheduling time with your squad to seek approval for
 
 |  Day | Deliverable | Status
 |---|---| ---|
-|Day 1| Project Description | Incomplete
-|Day 1| Wireframes / Priority Matrix / Functional Components | Incomplete
-|Day 2| Core Application Structure (HTML, CSS, etc.) | Incomplete
-|Day 2-4| Pseudocode / actual code | Incomplete
-|Day 5| Initial Clickable Model  | Incomplete
-|Day 6| MVP | Incomplete
-|Day 7| Present | Incomplete
+|Day 1 Feb 27| Project Description | Incomplete
+|Day 1 Feb 27| Wireframes / Priority Matrix / Functional Components | Incomplete
+|Day 2 Feb 28| Core Application Structure (HTML, CSS, etc.) | Incomplete
+|Day 2-4 Feb 28- Mar 2| Pseudocode / actual code | Incomplete
+|Day 5-6 Mar 3- Mar 4| Initial Clickable Model  | Incomplete
+|Day 7 Mar- 5| MVP | Incomplete
+|Day 8 Mar - 6| Present | Incomplete
 
 
 ## Project Description
