@@ -43,7 +43,7 @@ https://res.cloudinary.com/dvs0stnjy/image/upload/v1551213346/P4%20Priority%20Ma
 
 The functionality will then be divided into two separate lists: MPV and PostMVP.  Carefully decided what is placed into your MVP as the client will expect this functionality to be implemented upon project completion.  
 
-#### SAMPLE.....
+
 #### MVP 
 
 -Create landing page for login/sign-up
@@ -111,9 +111,21 @@ Time frames are also key in the development cycle.  You have limited time to cod
 #### SAMPLE.....
 | Component | Priority | Estimated Time | Actual Time |
 | --- | :---: |  :---: | :---: |
-| Adding Form | H | 3hrs| 3.5hrs |
-| Working with API | H | 3hrs| 2.5hrs |
-| Total | H | 6hrs| 5hrs | 
+| Create Landing Page for Login/Sign Up | H | 2hrs| N/A |
+| Create Login Page | H | 1hr | N/A |
+| Create Sign Up Page | H | 3hrs| N/A |
+| Create User "Home" Page to Select What To View | H | 2rs| N/A |
+| Allow User to select their team or full-league game schedule | H | 2hrs| N/A |
+| Allow user to view league standings| H | 2hrs| N/A |
+| Allow user to view ONLY their roster | H | 2hrs| N/A |
+| Allow user to view ONLY their team's practice schedule | H | 2hrs| N/A |
+| Create Admin "Home" Page to Select View/Update | H | 2hrs| N/A |
+| Admin Can View All or One Team's Rosters | H | 2hrs| N/A |
+| Admin Can View All or One Team's Schedules | H | 2hrs| N/A |
+| Build out databases | H | 3hrs| N/A |
+| Allow Admin to CRUD within Databases | H | 6hrs| N/A|
+| Mobile Responsive Styling | H | 8hrs| N/A |
+| Total | H | 39hrs| N/A | 
 
 ## Helper Functions
 Helper functions should be generic enought that they can be reused in other applications. Use this section to document all helper functions that fall into this category.
