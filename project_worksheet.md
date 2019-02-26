@@ -38,16 +38,27 @@ The functionality will then be divided into two separate lists: MPV and PostMVP.
 #### MVP 
 
 -Create login page
+
 -Create sign-up page
+
 -Create "home" page for user to select what to view
+
 -Users can view their specific team's game schedule or the league's full schedule
+
 -User can view the league's standing's table
+
 -User can view only their team's roster
+
 -User can view only their team's practice schedule
+
 -Admin can view all team's and league schedules
+
 -Admin can view all team's rosters
+
 -Admin can do full CRUD on databases
+
 -Build back end databases with tables for:
+
 	-Team Rosters
 	-Leagues with teams
 	-Team Games Schedule
