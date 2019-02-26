@@ -102,8 +102,31 @@ Based on the initial logic defined in the previous sections try and breakdown th
 #### SAMPLE.....
 | Component | Description | 
 | --- | :---: |  
-| Header | This will render the header include the nav | 
-| Footer | This will render the header include the nav | 
+| Landing | First page with option to Login/Sign Up| 
+| Login | User will login with email/password |
+| Sign-Up | User will login with email/password |
+| User Home | User will pick which schedule to view |
+| Team Schedule | Team's game schedule |
+| Practice Schedule | Team's practice schedule |
+| League Schedule | Every team's game schedule in the league|
+| League Standing | Where every team sits based off points |
+| Team Roster | User's specific team roster with name, age, position and phone number to contact |
+| Admin View or Update | Admin will decide whether to view normal components or the update components |
+| Admin Home | Admin will pick which schedule to edit |
+| Team Schedule Admin | Page for admin to pick, view, and edit/delete a team's game schedule |
+| Schedule Update Form | Form for admin to update team's schedule |
+| Team Practice Admin | Page for admin to pick and view a team's practice schedule |
+| Practice Update Form | Form for admin to update practice schedule |
+| League Schedule Admin | Page for admin to view and edit/delete league schedule |
+| Schedule Update Form | Page for admin to update league schedule |
+| League Standings Admin | Page for admin to view , add, and edit/delete league standings |
+| Team Update Form | Team add form|
+| Team Roster Admin | Page for admin to view, edit/delete a team's roster|
+| Add player form | Form for admin to add a player to a roster |
+
+
+
+
 
 
 
