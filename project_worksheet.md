@@ -72,9 +72,7 @@ The functionality will then be divided into two separate lists: MPV and PostMVP.
 
 ## Architectural Design
 
-Define the the components and the architectural design of your app.
-
-#### [SAMPLE FROM A MAP BASED PROJECT](https://res.cloudinary.com/dvjtpejbw/image/upload/v1540221204/20181022_111216.jpg)
+<img src= 'https://res.cloudinary.com/dvs0stnjy/image/upload/v1551210257/P4%20Components/E064EB72-5BA4-4C29-B5B8-17E5CF2B451D.jpg'>
 
 ## ERD
 
