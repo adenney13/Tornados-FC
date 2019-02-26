@@ -20,7 +20,7 @@ You are **responsible** for scheduling time with your squad to seek approval for
 
 ## Project Description
 
-The Torandos FC app will be the source for all scheduling information for the soccer club. Whether needing the practice schedule, curious about where the team is in league standings, or if they should need to contact someone from their team, the Torandos FC App will be their go to source.
+The Torandos FC app will be the source for all scheduling information for the soccer club. Whether needing the practice schedule, curious about where the team is in league standings, or if they should need to contact someone from their team, the Torandos FC App will be their go to source. I will be using React on Rails and Postgresql.
 
 ## Wireframes
 
@@ -37,6 +37,8 @@ The functionality will then be divided into two separate lists: MPV and PostMVP.
 #### SAMPLE.....
 #### MVP 
 
+-Create landing page for login/sign-up
+
 -Create login page
 
 -Create sign-up page
@@ -51,6 +53,8 @@ The functionality will then be divided into two separate lists: MPV and PostMVP.
 
 -User can view only their team's practice schedule
 
+-Create Admin "home" page for admin to select what to view/update
+
 -Admin can view all team's and league schedules
 
 -Admin can view all team's rosters
@@ -64,11 +68,15 @@ The functionality will then be divided into two separate lists: MPV and PostMVP.
 	-Team Games Schedule
 	-Team Practice Schedule
 	-User information specific to team rosters(parents of team roster)
--
+
+-Mobile responsive
 
 #### PostMVP 
 
-- Add data to favorites section
+-Mapbox location of fields for games and practices
+
+-Messaging/notification system from Admin to Users
+
 
 ## Architectural Design
 
@@ -76,7 +84,7 @@ The functionality will then be divided into two separate lists: MPV and PostMVP.
 
 ## ERD
 
-Create the ERD model for your project
+<img src= 'https://res.cloudinary.com/dvs0stnjy/image/upload/v1551211886/P4%20ERD/687870A8-5AD1-42D8-8A23-4F53F4F2FA39.jpg'>
 
 ## UI Components
 
@@ -107,7 +115,7 @@ Helper functions should be generic enought that they can be reused in other appl
 | Capitalize | This will capitalize the first letter in a string of text | 
 
 ## Additional Libraries
- Use this section to list all supporting libraries and thier role in the project. 
+ Use this section to list all supporting libraries and their role in the project. 
  
  #### SAMPLE.....
 | Library | What it Does | 
