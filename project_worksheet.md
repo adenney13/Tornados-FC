@@ -87,11 +87,11 @@ The functionality will then be divided into two separate lists: MPV and PostMVP.
 
 ## Architectural Design
 
-<img src= 'https://res.cloudinary.com/dvs0stnjy/image/upload/v1551210257/P4%20Components/E064EB72-5BA4-4C29-B5B8-17E5CF2B451D.jpg'>
+https://cloudinary.com/console/media_library/folders/all/P4%20Components
 
 ## ERD
 
-<img src= 'https://res.cloudinary.com/dvs0stnjy/image/upload/v1551211886/P4%20ERD/687870A8-5AD1-42D8-8A23-4F53F4F2FA39.jpg'>
+<img src= 'https://res.cloudinary.com/dvs0stnjy/image/upload/v1551285976/P4%20ERD/A835BAD5-C456-4989-818F-FF378A514527.jpg'>
 
 ## UI Components
 
