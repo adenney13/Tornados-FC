@@ -46,11 +46,9 @@ The functionality will then be divided into two separate lists: MPV and PostMVP.
 
 #### MVP 
 
--Create landing page for login/sign-up
+-Create landing page for users or admin
 
--Create login page
-
--Create sign-up page
+-Create admin login page
 
 -Create "home" page for user to select what to view
 
@@ -102,52 +100,58 @@ Based on the initial logic defined in the previous sections try and breakdown th
 #### SAMPLE.....
 | Component | Description | 
 | --- | :---: |  
-| Landing | First page with option to Login/Sign Up| 
-| Login | User will login with email/password |
-| Sign-Up | User will login with email/password |
-| User Home | User will pick which schedule to view |
-| Team Schedule | Team's game schedule |
+
+| Landing | First page with option for which schedule to view or admin| 
+| Admin | Admin will login with email/password |
+
+| Teamn Schedule | Team's game schedule |
 | Practice Schedule | Team's practice schedule |
 | League Schedule | Every team's game schedule in the league|
 | League Standing | Where every team sits based off points |
 | Team Roster | User's specific team roster with name, age, position and phone number to contact |
-| Admin View or Update | Admin will decide whether to view normal components or the update components |
-| Admin Home | Admin will pick which schedule to edit |
+
+| Admin Landing| Page for admin to select which schedule to edit |
 | Team Schedule Admin | Page for admin to pick, view, and edit/delete a team's game schedule |
-| Schedule Update Form | Form for admin to update team's schedule |
+| Update Game Form | Form for admin to update team's schedule |
+| Add Game Form | Form for admin to add a game to a schedule |
+
 | Team Practice Admin | Page for admin to pick and view a team's practice schedule |
 | Practice Update Form | Form for admin to update practice schedule |
+| Add Practice Form | Form for admin to add practice session |
+
 | League Schedule Admin | Page for admin to view and edit/delete league schedule |
-| Schedule Update Form | Page for admin to update league schedule |
+| Update Game Form | Form for admin to update league schedule game|
+| Add Game Form | Form for admin to add league game |
+
 | League Standings Admin | Page for admin to view , add, and edit/delete league standings |
-| Team Update Form | Team add form|
+| Team Update Form | Form for admin to update team's standings |
+| Add Team Form | Form for admin to add new team to league |
+
 | Team Roster Admin | Page for admin to view, edit/delete a team's roster|
-| Add player form | Form for admin to add a player to a roster |
+| Add Player form | Form for admin to add a player to a roster |
+| Edit Player Form | Form for admin to edit a player on a roster |
 
-
-
-
+| Field View | Page for admin to view what fields the team can play/practice at|
+| Add Field Form | Form for admin to add a new field |
+| Edit Field Form | Form for admin to edit a current field| 
 
 
 
 #### TIME FRAME
 | Component | Priority | Estimated Time | Actual Time |
 | --- | :---: |  :---: | :---: |
-| Create Landing Page for Login/Sign Up | H | 2hrs| N/A |
-| Create Login Page | H | 1hr | N/A |
-| Create Sign Up Page | H | 3hrs| N/A |
-| Create User "Home" Page to Select What To View | H | 2rs| N/A |
-| Allow User to select their team or full-league game schedule | H | 2hrs| N/A |
-| Allow user to view league standings| H | 2hrs| N/A |
-| Allow user to view ONLY their roster | H | 2hrs| N/A |
-| Allow user to view ONLY their team's practice schedule | H | 2hrs| N/A |
-| Create Admin "Home" Page to Select View/Update | H | 2hrs| N/A |
-| Admin Can View All or One Team's Rosters | H | 2hrs| N/A |
-| Admin Can View All or One Team's Schedules | H | 2hrs| N/A |
-| Build out databases | H | 3hrs| N/A |
+| Create Landing Pages | H | 3hrs| N/A |
+| Create Admin Page | H | 2hr | N/A |
+| Create Team Schedule Pages | H | 3hrs| N/A |
+| Create League Schedule Pages | H | 3hrs| N/A |
+| Create Team Practice Pages | H | 3hrs| N/A |
+| Create League Standing Pages | H | 3hrs| N/A |
+| Create Team Roster Pages | H | 3hrs| N/A |
+| Create Field Pages | H | 3hrs| N/A |
+| Build out databases | H | 10hrs| N/A |
 | Allow Admin to CRUD within Databases | H | 6hrs| N/A|
 | Mobile Responsive Styling | H | 8hrs| N/A |
-| Total | H | 39hrs| N/A | 
+| Total | H | 47hrs| N/A | 
 
 ## Helper Functions
 Helper functions should be generic enought that they can be reused in other applications. Use this section to document all helper functions that fall into this category.
