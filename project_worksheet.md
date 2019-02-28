@@ -52,11 +52,7 @@ The functionality will then be divided into two separate lists: MPV and PostMVP.
 
 -Create "home" page for user to select what to view
 
--Users can view their specific team's game schedule or the league's full schedule
-
--User can view the league's standing's table
-
--User can view only their team's roster
+-Users can view their specific team's game schedule or the club's full schedule
 
 -User can view only their team's practice schedule
 
