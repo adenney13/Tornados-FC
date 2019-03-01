@@ -36,8 +36,6 @@ ActiveRecord::Schema.define(version: 2019_03_01_004930) do
     t.integer "time"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "hometeam_id"
-    t.integer "awayteam_id"
     t.index ["away_id"], name: "index_games_on_away_id"
     t.index ["field_id"], name: "index_games_on_field_id"
     t.index ["home_id"], name: "index_games_on_home_id"
@@ -54,14 +52,14 @@ ActiveRecord::Schema.define(version: 2019_03_01_004930) do
   end
 
   create_table "practices", force: :cascade do |t|
-    t.bigint "teams_id"
-    t.bigint "fields_id"
+    t.bigint "team_id"
+    t.bigint "field_id"
     t.string "date"
-    t.integer "time"
+    t.string "time"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["fields_id"], name: "index_practices_on_fields_id"
-    t.index ["teams_id"], name: "index_practices_on_teams_id"
+    t.index ["field_id"], name: "index_practices_on_field_id"
+    t.index ["team_id"], name: "index_practices_on_team_id"
   end
 
   create_table "teams", force: :cascade do |t|
@@ -74,7 +72,7 @@ ActiveRecord::Schema.define(version: 2019_03_01_004930) do
 
   add_foreign_key "games", "fields"
   add_foreign_key "players", "teams"
-  add_foreign_key "practices", "fields", column: "fields_id"
-  add_foreign_key "practices", "teams", column: "teams_id"
+  add_foreign_key "practices", "fields"
+  add_foreign_key "practices", "teams"
   add_foreign_key "teams", "clubs"
 end

@@ -193,6 +193,9 @@ Player.create(name: 'Landon Cacioppo', number: 13, team_id: 4)
 Player.create(name: 'Rylan Boy', number: 21, team_id: 4)
 
 
-# Practice.create(team_id: 1, field_id: 1, date: , time: )
+Practice.create(team_id: 1, field_id: 1, date: 'Tuesday and Thursday', time: '7-8:15')
+Practice.create(team_id: 2, field_id: 1, date: 'Monday and Wednesday', time: '7-8:15')
+Practice.create(team_id: 3, field_id: 1, date: 'Tuesday and Thursday', time: '6-7')
+Practice.create(team_id: 4, field_id: 1, date: 'Monday and Wednedsday', time: '6-7')
 
-# Game.create(home_id: 1, away_id: 5, field_id: 2, date: , time: )
+Game.create(home_id: 1, away_id: 5, field_id: 2)
