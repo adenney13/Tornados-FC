@@ -65,12 +65,18 @@ ActiveRecord::Schema.define(version: 2019_03_01_004930) do
   create_table "teams", force: :cascade do |t|
     t.string "name"
     t.bigint "club_id"
+    t.bigint "home_id"
+    t.bigint "away_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["away_id"], name: "index_teams_on_away_id"
     t.index ["club_id"], name: "index_teams_on_club_id"
+    t.index ["home_id"], name: "index_teams_on_home_id"
   end
 
   add_foreign_key "games", "fields"
+  add_foreign_key "games", "teams", column: "away_id"
+  add_foreign_key "games", "teams", column: "home_id"
   add_foreign_key "players", "teams"
   add_foreign_key "practices", "fields"
   add_foreign_key "practices", "teams"
