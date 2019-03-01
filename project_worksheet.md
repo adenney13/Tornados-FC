@@ -9,8 +9,8 @@ You are **responsible** for scheduling time with your squad to seek approval for
 
 |  Day | Deliverable | Status
 |---|---| ---|
-|Day 1 Feb 27| Project Description | Incomplete
-|Day 1 Feb 27| Wireframes / Priority Matrix / Functional Components | Incomplete
+|Day 1 Feb 27| Project Description | Complete
+|Day 1 Feb 27| Wireframes / Priority Matrix / Functional Components | Complete
 |Day 2 Feb 28| Core Application Structure (HTML, CSS, etc.) | Incomplete
 |Day 2-4 Feb 28- Mar 2| Pseudocode / actual code | Incomplete
 |Day 5-6 Mar 3- Mar 4| Initial Clickable Model  | Incomplete
@@ -52,11 +52,7 @@ The functionality will then be divided into two separate lists: MPV and PostMVP.
 
 -Create "home" page for user to select what to view
 
--Users can view their specific team's game schedule or the league's full schedule
-
--User can view the league's standing's table
-
--User can view only their team's roster
+-Users can view their specific team's game schedule or the club's full schedule
 
 -User can view only their team's practice schedule
 
@@ -91,7 +87,7 @@ https://cloudinary.com/console/media_library/folders/all/P4%20Components
 
 ## ERD
 
-<img src= 'https://res.cloudinary.com/dvs0stnjy/image/upload/v1551285976/P4%20ERD/A835BAD5-C456-4989-818F-FF378A514527.jpg'>
+https://cloudinary.com/console/media_library/folders/all/P4%20ERD
 
 ## UI Components
 
@@ -106,8 +102,7 @@ Based on the initial logic defined in the previous sections try and breakdown th
 
 | Teamn Schedule | Team's game schedule |
 | Practice Schedule | Team's practice schedule |
-| League Schedule | Every team's game schedule in the league|
-| League Standing | Where every team sits based off points |
+| Club Schedule | Every team's game schedule in the league|
 | Team Roster | User's specific team roster with name, age, position and phone number to contact |
 
 | Admin Landing| Page for admin to select which schedule to edit |
@@ -119,13 +114,9 @@ Based on the initial logic defined in the previous sections try and breakdown th
 | Practice Update Form | Form for admin to update practice schedule |
 | Add Practice Form | Form for admin to add practice session |
 
-| League Schedule Admin | Page for admin to view and edit/delete league schedule |
+| Club Schedule Admin | Page for admin to view and edit/delete club schedule |
 | Update Game Form | Form for admin to update league schedule game|
 | Add Game Form | Form for admin to add league game |
-
-| League Standings Admin | Page for admin to view , add, and edit/delete league standings |
-| Team Update Form | Form for admin to update team's standings |
-| Add Team Form | Form for admin to add new team to league |
 
 | Team Roster Admin | Page for admin to view, edit/delete a team's roster|
 | Add Player form | Form for admin to add a player to a roster |
@@ -148,7 +139,7 @@ Based on the initial logic defined in the previous sections try and breakdown th
 | Create League Standing Pages | H | 3hrs| N/A |
 | Create Team Roster Pages | H | 3hrs| N/A |
 | Create Field Pages | H | 3hrs| N/A |
-| Build out databases | H | 10hrs| N/A |
+| Build out database | H | 10hrs| N/A |
 | Allow Admin to CRUD within Databases | H | 6hrs| N/A|
 | Mobile Responsive Styling | H | 8hrs| N/A |
 | Total | H | 47hrs| N/A | 
@@ -196,3 +187,4 @@ function reverse(string) {
 #### SAMPLE.....
 **ERROR**: app.js:34 Uncaught SyntaxError: Unexpected identifier                                
 **RESOLUTION**: Missing comma after first object in sources {} object
+
