@@ -98,32 +98,47 @@ Based on the initial logic defined in the previous sections try and breakdown th
 | --- | :---: |  
 
 | Landing | First page with option for which schedule to view or admin| 
+
 | Admin | Admin will login with email/password |
 
 | Teamn Schedule | Team's game schedule |
+
 | Practice Schedule | Team's practice schedule |
+
 | Club Schedule | Every team's game schedule in the league|
+
 | Team Roster | User's specific team roster with name, age, position and phone number to contact |
 
 | Admin Landing| Page for admin to select which schedule to edit |
+
 | Team Schedule Admin | Page for admin to pick, view, and edit/delete a team's game schedule |
+
 | Update Game Form | Form for admin to update team's schedule |
+
 | Add Game Form | Form for admin to add a game to a schedule |
 
 | Team Practice Admin | Page for admin to pick and view a team's practice schedule |
+
 | Practice Update Form | Form for admin to update practice schedule |
+
 | Add Practice Form | Form for admin to add practice session |
 
 | Club Schedule Admin | Page for admin to view and edit/delete club schedule |
+
 | Update Game Form | Form for admin to update league schedule game|
+
 | Add Game Form | Form for admin to add league game |
 
 | Team Roster Admin | Page for admin to view, edit/delete a team's roster|
+
 | Add Player form | Form for admin to add a player to a roster |
+
 | Edit Player Form | Form for admin to edit a player on a roster |
 
 | Field View | Page for admin to view what fields the team can play/practice at|
+
 | Add Field Form | Form for admin to add a new field |
+
 | Edit Field Form | Form for admin to edit a current field| 
 
 
