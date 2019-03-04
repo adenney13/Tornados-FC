@@ -1,11 +1,3 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
-
 Field.create(name: 'Sent Church', location: '3701 W Spring Creek Pkwy Plano, TX 75023')
 Field.create(name: 'Bakersfield #5', location: '1201 Duncan Lane, Flower Mound, TX 75028')
 Field.create(name: 'Frisco 1A', location: '7255 Meadow Hill Frisco, TX 75034')
@@ -96,8 +88,6 @@ Club.create(name: 'Dallas Kicks')
 Club.create(name: 'Liverpool FC')
 Club.create(name: 'Garland Tigres Academy') 
 Club.create(name: 'Frisco Fusion')
-
-
 Team.create(name: 'Tornados FC 08 Boys', club_id: 1)
 Team.create(name: 'Tornados FC 05 Boys', club_id: 1)
 Team.create(name: 'Tornados FC 12 Boys', club_id: 1)
@@ -105,7 +95,11 @@ Team.create(name: 'Tornados FC 11 Boys', club_id: 1)
 Team.create(name: 'Solar 12B Perry Black', club_id: 2)
 Team.create(name: 'PAYD 12 Boys', club_id: 4)
 Team.create(name: 'FC Dallas 12B Wright', club_id: 3)
+Team.create(name: 'FC Dallas Red - Fernandez 12B', club_id: 3)
 Team.create(name: 'Forms Academy Alphaforms 12', club_id: 5)
+Team.create(name: 'FC Dallas 12B Ramirez', club_id: 3)
+Team.create(name: 'Solar East 12B Jordan', club_id: 2)
+Team.create(name: 'Solar 12B Perry Grey', club_id: 2)
 Team.create(name: 'HPSA Scots 11B', club_id: 6)
 Team.create(name: 'FC Dallas 11B Griffin', club_id: 3)
 Team.create(name: 'FC Dallas 11B Perez', club_id: 3)
@@ -198,4 +192,4 @@ Practice.create(team_id: 2, field_id: 1, date: 'Monday and Wednesday', time: '7-
 Practice.create(team_id: 3, field_id: 1, date: 'Tuesday and Thursday', time: '6-7')
 Practice.create(team_id: 4, field_id: 1, date: 'Monday and Wednedsday', time: '6-7')
 
-Game.create(home_id: 1, away_id: 5, field_id: 2)
+Game.create(home_id: 5, away_id: 1, field_id: 2)
