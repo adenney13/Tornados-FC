@@ -1,8 +1,12 @@
 import React from 'react'
 
-const Teams = props => {
+const Teams = (props) => {
+ console.log(props.teams)
     return(
-        <div>
+        <div className ="Teams">
+            {props.teams.map(team => {
+                return <p key={team.id}>{team.name}</p>
+            })}
             Teams
         </div>
     )

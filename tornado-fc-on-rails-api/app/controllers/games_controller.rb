@@ -1,7 +1,7 @@
 class GamesController < ApplicationController
     def index
         @games = Game.all
-        render json: { message: 'ok', games_data: @games}
+        render json: { message: 'ok', games_data: @games}, include: :teams 
     end
 
     def show
