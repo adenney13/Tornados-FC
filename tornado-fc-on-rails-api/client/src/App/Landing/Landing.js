@@ -14,7 +14,24 @@ class Landing extends Component {
         }
     }
 
+    getTeamsData = async () => {
+        try {
+            const teams = await axios.get('/teams')
+            
+            this.setState({
+                teams: teams
+            })
+        } catch(e) {
+            console.log(e.message)
+        }
+    }
+
+    componentDidMount() {
+        this.getTeamsData()
+    }
+
     render() {
+        console.log(this.state.teams)
         return(
             <div className= 'landing'>
                 Landing page links here!
