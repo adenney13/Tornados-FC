@@ -87,6 +87,21 @@ class Landing extends Component {
         }
     }
 
+    createTeam = async () => {
+        await axios.post('/teams', this.state)
+    }
+
+    handleChange = (e) => {
+        this.setState({
+            [e.target.name]: e.target.value
+        })
+    }
+
+    CreateTeamHandleSubmit = (e) => {
+        e.preventDefault()
+        this.createTeam()
+    }
+
     componentDidMount() {   
         this.getTeamsData()
         this.getGamesData()
@@ -133,7 +148,8 @@ class Landing extends Component {
                     <Route
                         path='/teams'
                         render={() => < Teams 
-                        teams={this.state.teams}/>}
+                        teams={this.state.teams}
+                        />}
                     />
                     <Route
                         path='/clubs'
@@ -148,7 +164,11 @@ class Landing extends Component {
                         fields={this.state.fields}
                         players={this.state.players}
                         practices={this.state.practices}
-                        clubs={this.state.clubs}/>}
+                        clubs={this.state.clubs}
+                        createTeam={this.createTeam}
+                        onSubmit={this.CreateTeamHandleSubmit}
+                        onChange={this.handleChange}
+                        />}
                     />
                   
                 </main>

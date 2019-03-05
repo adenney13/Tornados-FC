@@ -41,7 +41,11 @@ const Admin = (props) => {
                     <Route
                         path='/teams-admin'
                         render={() => < TeamsAdmin 
-                        teams={props.teams}/>}
+                        teams={props.teams}
+                        createTeam={props.createTeam}
+                        onSubmit={props.CreateTeamHandleSubmit}
+                        onChange={props.handleChange}
+                        />}
                     />
                     <Route
                         path='/clubs-admin'
