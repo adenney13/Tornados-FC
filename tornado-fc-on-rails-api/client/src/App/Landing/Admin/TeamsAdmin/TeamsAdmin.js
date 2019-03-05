@@ -5,9 +5,9 @@ const TeamsAdmin = (props) => {
     return(
         <div className ="teams-admin">
             {props.teams.map(team => {
-                return <p key={team.id}>{team.name}</p>
+                return <p key={team.id}>{team.name}<br /> <button>Edit</button><button>Delete</button></p>
             })}
-            Teams
+            <button>Add New Team</button>
         </div>
     )
 }

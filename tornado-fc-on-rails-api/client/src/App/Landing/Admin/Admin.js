@@ -4,10 +4,12 @@ import PracticesAdmin from './PracticesAdmin/PracticesAdmin'
 import GamesAdmin from './GamesAdmin/GamesAdmin'
 import RostersAdmin from './RostersAdmin/RostersAdmin'
 import ClubsAdmin from './ClubsAdmin/ClubsAdmin'
-import { Route, Link } from 'react-router-dom'
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
 
 const Admin = (props) => {
+ 
     return (
+        <Router>
         <div className= 'admin_landing'>
                 Admin Landing page links here!
                 <nav>
@@ -46,20 +48,11 @@ const Admin = (props) => {
                         render={() => < ClubsAdmin 
                         clubs={props.clubs}/>}
                     />
-                    {/* <Route
-                        path='/admin'
-                        render={() => < Admin 
-                        teams={this.state.teams}
-                        games={this.state.games}
-                        fields={this.state.fields}
-                        players={this.state.players}
-                        practices={this.state.practices}
-                        clubs={this.state.clubs}/>}
-                    /> */}
                   
                 </main>
                 
             </div>
+            </Router>
     )
 }
 
