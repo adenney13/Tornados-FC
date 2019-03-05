@@ -7,7 +7,7 @@ class Team < ApplicationRecord
    # has_many :away, :class_name => 'Game', :foreign_key => 'away_id'
    has_many :games_teams
    has_one :practice
-   
+   has_many :player
 end
 
  

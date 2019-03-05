@@ -5,7 +5,7 @@ const Rosters = (props) => {
     return(
         <div>
         {props.players.map(player => {
-            return <p key={player.id}>Name: {player.name} Numer: {player.number} </p>
+            return <p key={player.id}>Name: {player.name} Number: {player.number} Team: {player.team.name} </p>
         })}
             
         </div>

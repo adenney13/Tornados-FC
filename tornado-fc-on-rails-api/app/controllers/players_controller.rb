@@ -1,7 +1,7 @@
 class PlayersController < ApplicationController
     def index
         @players = Player.all
-        render json: { message: 'ok', players_data: @players}
+        render json: { message: 'ok', players_data: @players}, include: [:team]
     end
 
     def show
