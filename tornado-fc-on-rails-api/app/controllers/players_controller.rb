@@ -10,12 +10,13 @@ class PlayersController < ApplicationController
             render json: { message: 'ok', players_data: @players}
         rescue ActiveRecord::RecordNotFound
             render json: {message: 'player not found'}, status: 404
+        end
     end
 
     def create
         begin
-          player = Player.create(player_params)
-          render json: {player: player}, status: 201
+          @player = Player.create(player_params)
+          render json: {player: @player}, status: 201
         rescue Exception
           server_error
         end
@@ -23,9 +24,9 @@ class PlayersController < ApplicationController
     
       def update
         begin
-          player = Player.find(params[:id])
-          player.update_attributes(player_params)
-          render json: {player: player}, status: 200
+          @player = Player.find(params[:id])
+          @player.update_attributes(player_params)
+          render json: {player: @player}, status: 200
         rescue ActiveRecord::RecordNotFound
           not_found
         rescue Exception
@@ -37,5 +38,17 @@ class PlayersController < ApplicationController
         Player.destroy(params[:id])
         render json: {message: "Deleted player with #{params[:id]}"}, status: 200
     end
-end
+
+private
+      def not_found
+        render json: {message: "No record found"}, status: 404
+      end
+    
+      def server_error
+        render json: {message: "Internal server error"}, status: 500
+      end
+    
+      def player_params
+        params.require(:player).permit(:name, :number, :team_id)
+      end
 end

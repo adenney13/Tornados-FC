@@ -35,6 +35,7 @@ class Landing extends Component {
             },
             player: { 
                 name: '',
+                number: '',
                 team_id: null
             },
             practice: {
@@ -146,8 +147,20 @@ class Landing extends Component {
         await axios.delete('/teams', e.target.value)
     }
 
-    createPlayer = async (e) => {
-        await axios.post('/players', this.state)
+    createPlayer = async () => {
+        
+        try {
+            const body = {
+                "player": {
+                    "name": this.state.player.name,
+                    "number": this.state.player.number,
+                    "team_id": this.state.player.team_id
+                }
+            }
+        const createNewPlayer = await axios.post('/players', body)
+        console.log(body)
+        console.log(createNewPlayer)
+        } catch (err) {console.log(err)}
     }
 
     editPlayer = async () => {
@@ -218,11 +231,21 @@ class Landing extends Component {
         this.getRefreshedData()
     }
 
-    handleChange = (e) => {
+    teamHandleChange = (e) => {
         console.log('changing', e.target.value)
         this.setState({
             team:{
                 ...this.state.team,
+                [e.target.name]: e.target.value
+            }
+        })
+    }
+
+    playerHandleChange = (e) => {
+        console.log('changing player', e.target.value)
+        this.setState({
+            player:{
+                ...this.state.player,
                 [e.target.name]: e.target.value
             }
         })
@@ -233,6 +256,10 @@ class Landing extends Component {
         this.createTeam()
     }
 
+    createPlayerHandleSubmit = (e) => {
+        e.preventDefault()
+        this.createPlayer()
+    }
     
     editTeamHandleSubmit = (e) => {
         e.preventDefault()
@@ -316,12 +343,13 @@ class Landing extends Component {
                         player={this.state.player}
                         createTeam={this.createTeam}
                         createTeamHandleSubmit={this.createTeamHandleSubmit}
-                        teamNameHandleChange={this.teamNameHandleChange}
+                        playerHandleChange={this.playerHandleChange}
+                        createPlayerHandleSubmit={this.createPlayerHandleSubmit}
                         deleteTeam={this.deleteTeam}
                         deleteGame={this.deleteGame}
                         deletePractice={this.deletePractice}
                         deletePlayer={this.deletePlayer}
-                        handleChange={this.handleChange}
+                        teamHandleChange={this.teamHandleChange}
                         />}
                     />
                   

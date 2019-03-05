@@ -22,8 +22,8 @@ const TeamsAdmin = (props) => {
                 club={props.club}
                 createTeam={props.createTeam}
                 createTeamHandleSubmit={props.createTeamHandleSubmit}
-                handleChange={props.handleChange}
-                teamNameHandleChange={props.teamNameHandleChange}
+                teamHandleChange={props.teamHandleChange}
+                
                 />}
             />
             <Route
