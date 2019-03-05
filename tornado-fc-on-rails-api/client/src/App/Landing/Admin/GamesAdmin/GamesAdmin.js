@@ -10,7 +10,7 @@ const Games = (props) => {
                 <p >Date: {game.date} Time: {game.time}</p>
                 <p >{game.home_teams.name} vs {game.away_teams.name} @ {game.field.name} 
 
-                <br/> <button>Edit</button> <button value = {game.id} onClick={props.deleteGame}>Delete</button></p>
+                <br/> <button>Edit</button> <button onClick={() => props.deleteGame(game.id)}>Delete</button></p>
                     </div>
                 )
             })}

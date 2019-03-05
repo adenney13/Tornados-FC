@@ -12,6 +12,27 @@ class GamesController < ApplicationController
             render json: {message: 'game not found'}, status: 404
     end
 
+    def create
+        begin
+          game = Game.create(game_params)
+          render json: {game: game}, status: 201
+        rescue Exception
+          server_error
+        end
+      end
+    
+      def update
+        begin
+          game = Game.find(params[:id])
+          game.update_attributes(game_params)
+          render json: {game: game}, status: 200
+        rescue ActiveRecord::RecordNotFound
+          not_found
+        rescue Exception
+          server_error
+        end
+      end
+
     def destroy 
         Game.destroy(params[:id])
         render json: {message: "Deleted game with #{params[:id]}"}, status: 200

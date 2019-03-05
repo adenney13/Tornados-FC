@@ -4,9 +4,6 @@ import TeamsAdminEdit from './TeamsAdminForms/TeamsAdminEdit'
 import {BrowserRouter as Router, Link, Route} from 'react-router-dom'
 
 const TeamsAdmin = (props) => {
-    console.log(props.deleteTeamHandleSubmit)
-    console.log(props.deleteTeam)
- console.log(props.handleChange)
     return(
         <Router>
         <div className ="teams-admin">
@@ -26,6 +23,7 @@ const TeamsAdmin = (props) => {
                 createTeam={props.createTeam}
                 createTeamHandleSubmit={props.createTeamHandleSubmit}
                 handleChange={props.handleChange}
+                teamNameHandleChange={props.teamNameHandleChange}
                 />}
             />
             <Route

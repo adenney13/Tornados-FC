@@ -2,27 +2,34 @@ import React from 'react'
 
 
 const TeamsAdminCreate = (props) => {
-    console.log(props.clubs)
-    console.log(props.team.name)
-    console.log(props.handleChange)
-    console.log(props.club)
+    
+    const renderClubForm = props.clubs.map((club) => {
+        return <option type='number' name={club.name} value = {club.id} onChange={props.handleChange}>{club.name}</option>
+        })
+
         return(
-            <form >
+            <form onSubmit = {props.createTeamHandleSubmit}>
                 <label>
                     Team Name:
                     <input type='text' value={props.team.name} name='name' onChange={props.handleChange} />
                 </label>
                 <br />
                 <label>
-                    Club:
-                    <input type='number' name='club_id' onChange={props.handleChange} />
+                    Club: <select 
+                    value={props.team.club_id}
+                    name='club_id' 
+                    onChange={props.handleChange}>{renderClubForm}</select>
+                    
                 </label>
                 <br />
                 <br />
-                <button onSubmit = {props.createTeamHandleSubmit}>Create Team</button>
+                <button>Create Team</button>
             </form>
         )
-    
+        
 }
+        
+    
+
 
 export default TeamsAdminCreate

@@ -55,6 +55,7 @@ console.log(props.handleChange)
                         deleteTeam={props.deleteTeam}
                         deleteTeamHandleSubmit={props.deleteTeamHandleSubmit}
                         handleChange={props.handleChange}
+                        teamNameHandleChange={props.teamNameHandleChange}
                         />}
                     />
                     <Route

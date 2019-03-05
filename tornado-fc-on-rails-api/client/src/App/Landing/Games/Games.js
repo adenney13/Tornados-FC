@@ -6,9 +6,9 @@ const Games = (props) => {
         <div className='games'>
              {props.games.map(game => {
                 return (
-                    <div>
-                    <p key={game.id}>Date: {game.date} Time: {game.time}</p>
-                    <p key={game.id}>{game.home_teams.name} vs {game.away_teams.name} @ {game.field.name} </p>
+                    <div key={game.id}>
+                    <p >Date: {game.date} Time: {game.time}</p>
+                    <p >{game.home_teams.name} vs {game.away_teams.name} @ {game.field.name} </p>
                     <br />
                     </div>
                 )

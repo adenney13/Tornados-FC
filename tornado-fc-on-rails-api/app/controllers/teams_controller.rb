@@ -15,8 +15,8 @@ class TeamsController < ApplicationController
    
     def create
         begin
-          team = Team.create(team_params)
-          render json: {team: team}, status: 201
+          @team = Team.create(team_params)
+          render json: {team: @team}, status: 201
         rescue Exception
           server_error
         end
@@ -24,9 +24,9 @@ class TeamsController < ApplicationController
     
       def update
         begin
-          team = Team.find(params[:id])
-          team.update_attributes(team_params)
-          render json: {team: team}, status: 200
+          @team = Team.find(params[:id])
+          @team.update_attributes(team_params)
+          render json: {team: @team}, status: 200
         rescue ActiveRecord::RecordNotFound
           not_found
         rescue Exception
@@ -35,7 +35,7 @@ class TeamsController < ApplicationController
       end
     
       def destroy 
-        Team.destroy(params[:id])
+        @team = Team.destroy(params[:id])
         render json: {message: "Deleted team with #{params[:id]}"}, status: 200
       end
     
@@ -49,7 +49,7 @@ class TeamsController < ApplicationController
       end
     
       def team_params
-        params.require(:team).permit(:title, :year, :director, :plot)
+        params.require(:team).permit(:name, :club_id)
       end
    
 end
