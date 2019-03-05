@@ -2,8 +2,10 @@ import React from 'react'
 
 
 const TeamsAdminCreate = (props) => {
+    console.log(props.clubs)
     console.log(props.team.name)
     console.log(props.handleChange)
+    console.log(props.club)
         return(
             <form >
                 <label>

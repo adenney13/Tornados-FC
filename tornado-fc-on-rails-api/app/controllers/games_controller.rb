@@ -11,5 +11,10 @@ class GamesController < ApplicationController
         rescue ActiveRecord::RecordNotFound
             render json: {message: 'team not found'}, status: 404
     end
+
+    def destroy 
+        Game.destroy(params[:id])
+        render json: {message: "Deleted game with #{params[:id]}"}, status: 200
+      end
 end
 end

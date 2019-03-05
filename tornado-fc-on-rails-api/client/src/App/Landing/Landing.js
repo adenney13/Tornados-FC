@@ -39,6 +39,9 @@ class Landing extends Component {
             practice: {
                 team_id: null,
                 field_id: null
+            },
+            club: {
+                name: ''
             }
         }
     }
@@ -109,9 +112,42 @@ class Landing extends Component {
         }
     }
 
+    getRefreshedData () {
+        this.getTeamsData()
+        this.getGamesData()
+        this.getFieldsData()
+        this.getPlayersData()
+        this.getPracticesData()
+        this.getClubsData()
+    }
+
     createTeam = async () => {
         await axios.post('/teams', this.state)
     }
+
+    editTeam = async () => {
+        await axios.put('/teams', this.state)
+    }
+
+    deleteTeam = async (e) => {
+        console.log(e.target.value)
+        await axios.delete('/teams', e.target.value)
+    }
+
+    createGame = async () => {
+        await axios.post('/games', this.state)
+    }
+
+    editGame = async () => {
+        await axios.put('/games', this.state)
+    }
+
+    deleteGame = async (e) => {
+        console.log(e.target.value)
+        await axios.delete(`/games/${e.target.value}`)
+        this.getRefreshedData()
+    }
+
 
     handleChange = (e) => {
         console.log('changing', e.target.value)
@@ -120,7 +156,6 @@ class Landing extends Component {
                 ...this.state.team,
                 [e.target.name]: e.target.value
             }
-            
         })
     }
 
@@ -129,12 +164,30 @@ class Landing extends Component {
         this.createTeam()
     }
 
-    editTeam = async () => {
-        await axios.put('/teams', this.state)
-    }
+    
     editTeamHandleSubmit = (e) => {
         e.preventDefault()
         this.editTeam()
+    }
+
+    deleteTeamHandleSubmit = (e) => {
+        e.preventDefault()
+        this.deleteTeam()
+    }
+
+    createGameHandleSubmit = (e) => {
+        e.preventDefault()
+        this.createGame()
+    }
+    
+    editGameHandleSubmit = (e) => {
+        e.preventDefault()
+        this.editGame()
+    }
+
+    deleteGameHandleSubmit = (e) => {
+        e.preventDefault()
+        this.deleteGame()
     }
 
     componentDidMount() {   
@@ -194,15 +247,21 @@ class Landing extends Component {
                     <Route
                         path='/admin'
                         render={() => < Admin 
+                        clubs={this.state.clubs}
                         teams={this.state.teams}
                         games={this.state.games}
                         fields={this.state.fields}
                         players={this.state.players}
                         practices={this.state.practices}
                         team={this.state.team}
-                        clubs={this.state.clubs}
+                        club={this.state.club}
+                        game={this.state.game}
                         createTeam={this.createTeam}
                         createTeamHandleSubmit={this.createTeamHandleSubmit}
+                        deleteTeam={this.deleteTeam}
+                        deleteTeamHandleSubmit={this.deleteTeamHandleSubmit}
+                        deleteGame={this.deleteGame}
+                        deleteGameHandleSubmit={this.deleteGameHandleSubmit}
                         handleChange={this.handleChange}
                         />}
                     />

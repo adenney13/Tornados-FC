@@ -26,7 +26,10 @@ console.log(props.handleChange)
                     <Route
                         path='/games-admin'
                         render={() => < GamesAdmin 
-                        games={props.games}/>}
+                        games={props.games}
+                        game={props.game}
+                        deleteGame={props.deleteGame}
+                        deleteGameHandleSubmit={props.deleteGameHandleSubmit}/>}
                         />
                     <Route
                         path='/practices-admin'
@@ -41,10 +44,14 @@ console.log(props.handleChange)
                     <Route
                         path='/teams-admin'
                         render={() => < TeamsAdmin 
+                        clubs={props.clubs}
                         teams={props.teams}
                         team={props.team}
+                        club={props.club}
                         createTeam={props.createTeam}
                         createTeamHandleSubmit={props.createTeamHandleSubmit}
+                        deleteTeam={props.deleteTeam}
+                        deleteTeamHandleSubmit={props.deleteTeamHandleSubmit}
                         handleChange={props.handleChange}
                         />}
                     />
