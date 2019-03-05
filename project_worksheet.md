@@ -11,7 +11,7 @@ You are **responsible** for scheduling time with your squad to seek approval for
 |---|---| ---|
 |Day 1 Feb 27| Project Description | Complete
 |Day 1 Feb 27| Wireframes / Priority Matrix / Functional Components | Complete
-|Day 2 Feb 28| Core Application Structure (HTML, CSS, etc.) | Incomplete
+|Day 2 Feb 28| Core Application Structure (HTML, CSS, etc.) | Complete
 |Day 2-4 Feb 28- Mar 2| Pseudocode / actual code | Incomplete
 |Day 5-6 Mar 3- Mar 4| Initial Clickable Model  | Incomplete
 |Day 7 Mar- 5| MVP | Incomplete
@@ -146,18 +146,18 @@ Based on the initial logic defined in the previous sections try and breakdown th
 #### TIME FRAME
 | Component | Priority | Estimated Time | Actual Time |
 | --- | :---: |  :---: | :---: |
-| Create Landing Pages | H | 3hrs| N/A |
-| Create Admin Page | H | 2hr | N/A |
-| Create Team Schedule Pages | H | 3hrs| N/A |
+| Create Landing Pages | H | 3hrs| 3hrs |
+| Create Admin Page | H | 2hr | 1hr |
+| Create Team Schedule Pages | H | 3hrs| 2hrs|
 | Create League Schedule Pages | H | 3hrs| N/A |
-| Create Team Practice Pages | H | 3hrs| N/A |
+| Create Team Practice Pages | H | 3hrs| 2hrs |
 | Create League Standing Pages | H | 3hrs| N/A |
-| Create Team Roster Pages | H | 3hrs| N/A |
-| Create Field Pages | H | 3hrs| N/A |
-| Build out database | H | 10hrs| N/A |
+| Create Team Roster Pages | H | 3hrs| 2hrs |
+| Create Field Pages | H | 3hrs| 2hrs |
+| Build out database | H | 10hrs| 24hrs |
 | Allow Admin to CRUD within Databases | H | 6hrs| N/A|
 | Mobile Responsive Styling | H | 8hrs| N/A |
-| Total | H | 47hrs| N/A | 
+| Total | H | 47hrs| 36hrs | 
 
 ## Helper Functions
 Helper functions should be generic enought that they can be reused in other applications. Use this section to document all helper functions that fall into this category.
