@@ -7,7 +7,6 @@ import ClubsAdmin from './ClubsAdmin/ClubsAdmin'
 import { Route, Link } from 'react-router-dom'
 
 const Admin = (props) => {
-    console.log(props.teams)
     return (
         <div className= 'admin_landing'>
                 Admin Landing page links here!
