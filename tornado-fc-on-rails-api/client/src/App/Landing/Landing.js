@@ -134,6 +134,34 @@ class Landing extends Component {
         await axios.delete('/teams', e.target.value)
     }
 
+    createPlayer = async (e) => {
+        await axios.post('/players', this.state)
+    }
+
+    editPlayer = async () => {
+        await axios.put('/players', this.state)
+    }
+
+    deletePlayer = async (e) => {
+        console.log(e.target.value)
+        await axios.delete(`/players/${e.target.value}`)
+        this.getRefreshedData()
+    }
+
+    createPractice = async (e) => {
+        await axios.post('/practices', this.state)
+    }
+
+    editPractice = async () => {
+        await axios.put('/practices', this.state)
+    }
+
+    deletePractice = async (e) => {
+        console.log(e.target.value)
+        await axios.delete(`/practices/${e.target.value}`)
+        this.getRefreshedData()
+    }
+
     createGame = async () => {
         await axios.post('/games', this.state)
     }
@@ -183,11 +211,6 @@ class Landing extends Component {
     editGameHandleSubmit = (e) => {
         e.preventDefault()
         this.editGame()
-    }
-
-    deleteGameHandleSubmit = (e) => {
-        e.preventDefault()
-        this.deleteGame()
     }
 
     componentDidMount() {   
@@ -256,12 +279,13 @@ class Landing extends Component {
                         team={this.state.team}
                         club={this.state.club}
                         game={this.state.game}
+                        player={this.state.player}
                         createTeam={this.createTeam}
                         createTeamHandleSubmit={this.createTeamHandleSubmit}
                         deleteTeam={this.deleteTeam}
-                        deleteTeamHandleSubmit={this.deleteTeamHandleSubmit}
                         deleteGame={this.deleteGame}
-                        deleteGameHandleSubmit={this.deleteGameHandleSubmit}
+                        deletePractice={this.deletePractice}
+                        deletePlayer={this.deletePlayer}
                         handleChange={this.handleChange}
                         />}
                     />

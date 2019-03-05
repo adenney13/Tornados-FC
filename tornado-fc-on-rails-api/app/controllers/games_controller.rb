@@ -9,12 +9,12 @@ class GamesController < ApplicationController
             @game = Game.find(params[:id])
             render json: { message: 'ok', games_data: @games}
         rescue ActiveRecord::RecordNotFound
-            render json: {message: 'team not found'}, status: 404
+            render json: {message: 'game not found'}, status: 404
     end
 
     def destroy 
         Game.destroy(params[:id])
         render json: {message: "Deleted game with #{params[:id]}"}, status: 200
-      end
+    end
 end
 end
