@@ -7,7 +7,7 @@ import ClubsAdmin from './ClubsAdmin/ClubsAdmin'
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
 
 const Admin = (props) => {
- 
+console.log(props.handleChange)
     return (
         <Router>
         <div className= 'admin_landing'>
@@ -42,9 +42,10 @@ const Admin = (props) => {
                         path='/teams-admin'
                         render={() => < TeamsAdmin 
                         teams={props.teams}
+                        team={props.team}
                         createTeam={props.createTeam}
-                        onSubmit={props.CreateTeamHandleSubmit}
-                        onChange={props.handleChange}
+                        createTeamHandleSubmit={props.createTeamHandleSubmit}
+                        handleChange={props.handleChange}
                         />}
                     />
                     <Route

@@ -33,7 +33,7 @@ ActiveRecord::Schema.define(version: 2019_03_04_235600) do
     t.bigint "away_id"
     t.bigint "field_id"
     t.string "date"
-    t.integer "time"
+    t.string "time"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["away_id"], name: "index_games_on_away_id"

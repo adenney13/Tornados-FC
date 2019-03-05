@@ -17,7 +17,29 @@ class Landing extends Component {
             games: [],
             players: [],
             practices: [],
-            clubs: []
+            clubs: [],
+
+            team: {
+                name: '',
+                club_id: null
+            },
+            field: {
+                name: '',
+                location: ''
+            },
+            game: {
+                home_id: null,
+                away_id: null,
+                field_id: null
+            },
+            player: { 
+                name: '',
+                team_id: null
+            },
+            practice: {
+                team_id: null,
+                field_id: null
+            }
         }
     }
 
@@ -92,14 +114,27 @@ class Landing extends Component {
     }
 
     handleChange = (e) => {
+        console.log('changing', e.target.value)
         this.setState({
-            [e.target.name]: e.target.value
+            team:{
+                ...this.state.team,
+                [e.target.name]: e.target.value
+            }
+            
         })
     }
 
-    CreateTeamHandleSubmit = (e) => {
+    createTeamHandleSubmit = (e) => {
         e.preventDefault()
         this.createTeam()
+    }
+
+    editTeam = async () => {
+        await axios.put('/teams', this.state)
+    }
+    editTeamHandleSubmit = (e) => {
+        e.preventDefault()
+        this.editTeam()
     }
 
     componentDidMount() {   
@@ -164,10 +199,11 @@ class Landing extends Component {
                         fields={this.state.fields}
                         players={this.state.players}
                         practices={this.state.practices}
+                        team={this.state.team}
                         clubs={this.state.clubs}
                         createTeam={this.createTeam}
-                        onSubmit={this.CreateTeamHandleSubmit}
-                        onChange={this.handleChange}
+                        createTeamHandleSubmit={this.createTeamHandleSubmit}
+                        handleChange={this.handleChange}
                         />}
                     />
                   

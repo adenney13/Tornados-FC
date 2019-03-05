@@ -1,26 +1,24 @@
 import React from 'react'
-import axios from 'axios'
+
 
 const TeamsAdminCreate = (props) => {
-    
+    console.log(props.team.name)
+    console.log(props.handleChange)
         return(
-            <div>
-                <h1>CREATE FORM!</h1>
-            </div>
-            // <form onSubmit={this.handleSubmit} >
-            //     <label>
-            //         Team Name:
-            //         <input type='text' name='name' onChange={this.handleChange} />
-            //     </label>
-            //     <br />
-            //     <label>
-            //         Club:
-            //         <input type='number' name='club_id' onChange={this.handleChange} />
-            //     </label>
-            //     <br />
-            //     <br />
-            //     <button>Create Team</button>
-            // </form>
+            <form >
+                <label>
+                    Team Name:
+                    <input type='text' value={props.team.name} name='name' onChange={props.handleChange} />
+                </label>
+                <br />
+                <label>
+                    Club:
+                    <input type='number' name='club_id' onChange={props.handleChange} />
+                </label>
+                <br />
+                <br />
+                <button onSubmit = {props.createTeamHandleSubmit}>Create Team</button>
+            </form>
         )
     
 }
