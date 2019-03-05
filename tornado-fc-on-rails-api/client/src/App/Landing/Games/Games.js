@@ -5,9 +5,9 @@ const Games = (props) => {
     return(
         <div className='games'>
              {props.games.map(game => {
-                return <p key={game.id}>{game.home_id} vs {game.away_id} @ {game.field_id}</p>
+                return <p key={game.id}>{game.home_teams.name} vs {game.away_teams.name} @ {game.field.name}</p>
             })}
-            Games
+           
         </div>
     )
 }

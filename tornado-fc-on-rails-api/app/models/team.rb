@@ -5,7 +5,8 @@ class Team < ApplicationRecord
    # @team.away.name
    # has_many :home, :class_name => 'Game', :foreign_key => 'home_id'
    # has_many :away, :class_name => 'Game', :foreign_key => 'away_id'
-   has_and_belongs_to_many :games
+   has_many :games_teams
+   has_one :practice
    
 end
 

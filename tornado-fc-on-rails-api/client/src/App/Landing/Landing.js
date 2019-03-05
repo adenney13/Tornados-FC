@@ -4,6 +4,7 @@ import Teams from './Teams/Teams'
 import Practices from './Practices/Practices'
 import Games from './Games/Games'
 import Rosters from './Rosters/Rosters'
+import Clubs from './Clubs/Clubs'
 import Admin from './Admin/Admin'
 import { Route, Link } from 'react-router-dom'
 
@@ -106,7 +107,8 @@ class Landing extends Component {
                         <li><Link to='/practices'>Practices</Link></li>
                         <li><Link to='/rosters'>Rosters</Link></li>
                         <li><Link to='/teams'>Teams</Link></li>
-                        {/* <li><Link to='/admin'>Admin</Link></li>  */}
+                        <li><Link to='/clubs'>Clubs</Link></li>
+                        <li><Link to='/admin'>Admin</Link></li> 
                     </ul>
                 </nav>
                 <main>
@@ -133,16 +135,22 @@ class Landing extends Component {
                         render={() => < Teams 
                         teams={this.state.teams}/>}
                     />
-                    {/* <Rosters players={this.state.players}/>
-                    
-                    <Admin 
+                    <Route
+                        path='/clubs'
+                        render={() => < Clubs 
+                        clubs={this.state.clubs}/>}
+                    />
+                    <Route
+                        path='/admin'
+                        render={() => < Admin 
                         teams={this.state.teams}
                         games={this.state.games}
                         fields={this.state.fields}
                         players={this.state.players}
                         practices={this.state.practices}
-                        clubs={this.state.clubs}
-                    /> */}
+                        clubs={this.state.clubs}/>}
+                    />
+                  
                 </main>
                 
             </div>

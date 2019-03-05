@@ -1,7 +1,7 @@
 class PracticesController < ApplicationController
     def index
         @practices = Practice.all
-        render json: { message: 'ok', practices_data: @practices}
+        render json: { message: 'ok', practices_data: @practices}, include: [:field, :team] 
     end
 
     def show

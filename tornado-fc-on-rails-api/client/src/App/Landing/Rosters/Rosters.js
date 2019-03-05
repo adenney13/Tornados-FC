@@ -1,9 +1,13 @@
 import React from 'react'
 
-const Rosters = props => {
+const Rosters = (props) => {
+    console.log(props.players)
     return(
         <div>
-            Rosters
+        {props.players.map(player => {
+            return <p key={player.id}>Name: {player.name} Numer: {player.number} </p>
+        })}
+            
         </div>
     )
 }

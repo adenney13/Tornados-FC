@@ -1,9 +1,12 @@
 import React from 'react'
 
-const Clubs = props => {
+const Clubs = (props) => {
+    console.log(props.clubs)
     return(
         <div>
-            Clubs
+             {props.clubs.map(club => {
+                return <p key={club.id}>{club.name}</p>
+            })}
         </div>
     )
 }
