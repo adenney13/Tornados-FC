@@ -12,9 +12,9 @@ const GamesAdmin = (props) => {
                 return  (
                     <div key={game.id}>
                 <p >Date: {game.date} Time: {game.time}</p>
-                <p >{game.home_teams.name} vs {game.away_teams.name} @ {game.field.name} 
+                <p >{game.home_teams.name} vs {game.away_teams.name} @ {game.field.name} </p>
 
-                <br/> <button>Edit</button> <button onClick={() => props.deleteGame(game.id)}>Delete</button></p>
+                <br/> <Link to='/games-admin-edit'><button onClick={() => {console.log('clicked', game.id); props.getGameEditId(game.id)}}>Edit</button></Link> <button onClick={() => props.deleteGame(game.id)}>Delete</button>
                     </div>
                 )
             })}
@@ -33,7 +33,13 @@ const GamesAdmin = (props) => {
             <Route
                 path='/games-admin-edit'
                 render={() => < GamesAdminEdit 
-               
+                    editGameHandleSubmit={props.editGameHandleSubmit}
+                    fields={props.fields}
+                    teams={props.teams}
+                    games={props.games}
+                    game={props.game}
+                    gameHandleChange={props.gameHandleChange}
+                    id={props.id}
                 />}
             />
            

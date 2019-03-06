@@ -48,7 +48,9 @@ class Landing extends Component {
             },
             club: {
                 name: ''
-            }
+            },
+
+            id: null
         }
     }
 
@@ -338,9 +340,18 @@ class Landing extends Component {
         this.createPractice()
     }
     
-    editGameHandleSubmit = (e) => {
+    editGameHandleSubmit = (e, id) => {
         e.preventDefault()
-        this.editGame()
+        this.editGame(this.state.id)
+        e.preventDefault()
+    }
+
+    getGameEditId = async (gameId) => {
+       await this.setState({
+            id: gameId
+        })
+        console.log('id is:', this.state.id);
+        
     }
 
     componentDidMount() {   
@@ -422,6 +433,9 @@ class Landing extends Component {
                         gameHandleChange={this.gameHandleChange}
                         createGameHandleSubmit={this.createGameHandleSubmit}
                         game={this.state.game}
+                        editGameHandleSubmit={this.editGameHandleSubmit}
+                        getGameEditId={this.getGameEditId}
+                        id={this.state.id}
                         />}
                     />
                   

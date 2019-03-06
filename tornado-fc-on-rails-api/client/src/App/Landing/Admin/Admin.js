@@ -32,7 +32,11 @@ console.log(props.playerHandleChange)
                         game={props.game}
                         deleteGame={props.deleteGame}
                         gameHandleChange={props.gameHandleChange}
-                        createGameHandleSubmit={props.createGameHandleSubmit}/>}
+                        createGameHandleSubmit={props.createGameHandleSubmit}
+                        editGameHandleSubmit={props.editGameHandleSubmit}
+                        getGameEditId={props.getGameEditId}
+                        id={props.id}
+                        />}
                         />
                     <Route
                         path='/practices-admin'

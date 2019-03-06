@@ -1,8 +1,8 @@
 import React from 'react'
 
 
-const GamesAdminCreate = (props) => {
-    console.log(props.teams)
+const GamesAdminEdit = (props) => {
+    console.log(props.teams, "PROPS")
     const renderTeamForm = props.teams.map((team) => {
         return <option type='number' name={team.name} value = {team.id} onChange={props.gameHandleChange}>{team.name}</option>
         })
@@ -11,7 +11,7 @@ const GamesAdminCreate = (props) => {
     })
 
         return(
-            <form onSubmit = {props.createGameHandleSubmit}>
+            <form onSubmit = {() => props.editGameHandleSubmit(props.id)}>
                <label>
                     Date:
                     <input type='text' value={props.game.date} name='date' onChange={props.gameHandleChange} />
@@ -45,10 +45,10 @@ const GamesAdminCreate = (props) => {
                 </label>
                 <br />
                 <br />
-                <button>Create Game</button>
+                <button>Edit Game</button>
             </form>
         )
         
 }
     
-export default GamesAdminCreate
+export default GamesAdminEdit

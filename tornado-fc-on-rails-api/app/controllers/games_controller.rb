@@ -7,7 +7,7 @@ class GamesController < ApplicationController
     def show
         begin
             @game = Game.find(params[:id])
-            render json: { message: 'ok', games_data: @games}
+            render json: { message: 'ok', games_data: @game}
         rescue ActiveRecord::RecordNotFound
             render json: {message: 'game not found'}, status: 404
         end
