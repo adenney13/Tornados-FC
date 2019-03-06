@@ -10,12 +10,13 @@ class PracticesController < ApplicationController
             render json: { message: 'ok', practices_data: @practices}
         rescue ActiveRecord::RecordNotFound
             render json: {message: 'practice not found'}, status: 404
+        end
     end
 
     def create
         begin
-          practice = Practice.create(practice_params)
-          render json: {practice: practice}, status: 201
+          @practice = Practice.create(practice_params)
+          render json: {practice: @practice}, status: 201
         rescue Exception
           server_error
         end
@@ -23,9 +24,9 @@ class PracticesController < ApplicationController
     
       def update
         begin
-          practice = Practice.find(params[:id])
-          practice.update_attributes(practice_params)
-          render json: {practice: practice}, status: 200
+          @practice = Practice.find(params[:id])
+          @practice.update_attributes(practice_params)
+          render json: {practice: @practice}, status: 200
         rescue ActiveRecord::RecordNotFound
           not_found
         rescue Exception
@@ -37,5 +38,17 @@ class PracticesController < ApplicationController
         Practice.destroy(params[:id])
         render json: {message: "Deleted practice with #{params[:id]}"}, status: 200
     end
-end
+
+private
+      def not_found
+        render json: {message: "No record found"}, status: 404
+      end
+    
+      def server_error
+        render json: {message: "Internal server error"}, status: 500
+      end
+    
+      def practice_params
+        params.require(:practice).permit(:team_id, :field_id, :date, :time)
+      end
 end

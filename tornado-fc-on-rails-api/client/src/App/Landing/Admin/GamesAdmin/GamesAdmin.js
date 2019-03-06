@@ -1,8 +1,12 @@
 import React from 'react'
+import GamesAdminCreate from './GamesAdminForms/GamesAdminCreate'
+import GamesAdminEdit from './GamesAdminForms/GamesAdminEdit'
+import {BrowserRouter as Router, Link, Route} from 'react-router-dom'
 
-const Games = (props) => {
-    console.log(props.games)
+const GamesAdmin = (props) => {
+    console.log(props.teams)
     return(
+        <Router>
         <div className='games'>
              {props.games.map(game => {
                 return  (
@@ -14,9 +18,28 @@ const Games = (props) => {
                     </div>
                 )
             })}
-           <button>Create New Game</button>
+            <Link to='/games-admin-create'><button>Create New Game</button></Link>
+            <Route
+                path='/games-admin-create'
+                render={() => < GamesAdminCreate 
+                    fields={props.fields}
+                    teams={props.teams}
+                    games={props.games}
+                    game={props.game}
+                    gameHandleChange={props.gameHandleChange}
+                    createGameHandleSubmit={props.createGameHandleSubmit}
+                />}
+            />
+            <Route
+                path='/games-admin-edit'
+                render={() => < GamesAdminEdit 
+               
+                />}
+            />
+           
         </div>
+        </Router>
     )
 }
 
-export default Games
+export default GamesAdmin

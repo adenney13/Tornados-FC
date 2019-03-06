@@ -4,10 +4,21 @@ const Rosters = (props) => {
     console.log(props.players)
     return(
         <div>
-        {props.players.map(player => {
-            return <p key={player.id}>Name: {player.name} Number: {player.number} Team: {player.team.name} </p>
-        })}
-            
+        <table border= '3'>
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Number</th>
+                <th>Team</th>
+              </tr>
+            </thead>
+            <tbody>
+                {props.players.map(player => {
+                    return <tr key={player.id}> <td>{player.name}</td>  
+                    <td>{player.number}</td><td>{player.team.name} </td></tr>
+                })}
+            </tbody>
+        </table>  
         </div>
     )
 }

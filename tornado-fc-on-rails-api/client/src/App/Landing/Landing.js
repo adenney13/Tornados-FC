@@ -22,25 +22,29 @@ class Landing extends Component {
 
             team: {
                 name: '',
-                club_id: null
+                club_id: ''
             },
             field: {
                 name: '',
                 location: ''
             },
             game: {
-                home_id: null,
-                away_id: null,
-                field_id: null
+                date: '',
+                time: '',
+                home_id: '',
+                away_id: '',
+                field_id: ''
             },
             player: { 
                 name: '',
                 number: '',
-                team_id: null
+                team_id: ''
             },
             practice: {
-                team_id: null,
-                field_id: null
+                team_id: '',
+                field_id: '',
+                date: '',
+                time: ''
             },
             club: {
                 name: ''
@@ -173,8 +177,20 @@ class Landing extends Component {
         this.getRefreshedData()
     }
 
-    createPractice = async (e) => {
-        await axios.post('/practices', this.state)
+    createPractice = async () => {
+        try {
+            const body = {
+                "practice": {
+                    "team_id": this.state.practice.team_id,
+                    "field_id": this.state.practice.field_id,
+                    "date": this.state.practice.date,
+                    "time": this.state.practice.time
+                }
+            }
+        const createNewPractice = await axios.post('/practices', body)
+        console.log(body)
+        console.log(createNewPractice)
+        } catch (err) {console.log(err)}
     }
 
     editPractice = async () => {
@@ -188,19 +204,45 @@ class Landing extends Component {
     }
 
     createGame = async () => {
-        await axios.post('/games', this.state)
+        try {
+            const body = {
+                "game": {
+                    "date": this.state.game.date,
+                    "time": this.state.game.time,
+                    "home_id": this.state.game.home_id,
+                    "away_id": this.state.game.away_id,
+                    "field_id": this.state.game.field_id
+                }
+            }
+        const createNewGame = await axios.post('/games', body)
+        console.log(body)
+        console.log(createNewGame)
+        } catch (err) {console.log(err)}
     }
+    
 
-    editGame = async () => {
-        await axios.put('/games', this.state)
+    editGame = async (id) => {
+        try {
+            const body = {
+                "game": {
+                    "date": this.state.game.date,
+                    "time": this.state.game.time,
+                    "home_id": this.state.game.home_id,
+                    "away_id": this.state.game.away_id,
+                    "field_id": this.state.game.field_id
+                }
+            }
+        const editThisGame = await axios.put(`/games/${id}`, body)
+        console.log(body)
+        console.log(editThisGame)
+        } catch (err) {console.log(err)}
     }
 
     deleteGame = async (id) => {
         try{
             await axios.delete(`/games/${id}`)
          this.getRefreshedData()
-        } catch (e) {console.log(e)}
-        
+        } catch (e) {console.log(e)}   
     }
 
     createClub = async () => {
@@ -251,6 +293,26 @@ class Landing extends Component {
         })
     }
 
+    gameHandleChange = (e) => {
+        console.log('changing game', e.target.value)
+        this.setState({
+            game:{
+                ...this.state.game,
+                [e.target.name]: e.target.value
+            }
+        })
+    }
+
+    practiceHandleChange = (e) => {
+        console.log('changing practice', e.target.value)
+        this.setState({
+            practice:{
+                ...this.state.practice,
+                [e.target.name]: e.target.value
+            }
+        })
+    }
+
     createTeamHandleSubmit = (e) => {
         e.preventDefault()
         this.createTeam()
@@ -269,6 +331,11 @@ class Landing extends Component {
     createGameHandleSubmit = (e) => {
         e.preventDefault()
         this.createGame()
+    }
+
+    createPracticeHandleSubmit = (e) => {
+        e.preventDefault()
+        this.createPractice()
     }
     
     editGameHandleSubmit = (e) => {
@@ -339,7 +406,9 @@ class Landing extends Component {
                         practices={this.state.practices}
                         team={this.state.team}
                         club={this.state.club}
-                        game={this.state.game}
+                        practice={this.state.practice}
+                        createPracticeHandleSubmit={this.createPracticeHandleSubmit}
+                        practiceHandleChange={this.practiceHandleChange}
                         player={this.state.player}
                         createTeam={this.createTeam}
                         createTeamHandleSubmit={this.createTeamHandleSubmit}
@@ -350,6 +419,9 @@ class Landing extends Component {
                         deletePractice={this.deletePractice}
                         deletePlayer={this.deletePlayer}
                         teamHandleChange={this.teamHandleChange}
+                        gameHandleChange={this.gameHandleChange}
+                        createGameHandleSubmit={this.createGameHandleSubmit}
+                        game={this.state.game}
                         />}
                     />
                   

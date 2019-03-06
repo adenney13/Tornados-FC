@@ -26,15 +26,23 @@ console.log(props.playerHandleChange)
                     <Route
                         path='/games-admin'
                         render={() => < GamesAdmin 
+                        fields={props.fields}
+                        teams={props.teams}
                         games={props.games}
                         game={props.game}
-                        deleteGame={props.deleteGame}/>}
+                        deleteGame={props.deleteGame}
+                        gameHandleChange={props.gameHandleChange}
+                        createGameHandleSubmit={props.createGameHandleSubmit}/>}
                         />
                     <Route
                         path='/practices-admin'
                         render={() => < PracticesAdmin 
+                        fields={props.fields}
+                        teams={props.teams}
                         practices={props.practices}
                         practice={props.practice}
+                        createPracticeHandleSubmit={props.createPracticeHandleSubmit}
+                        practiceHandleChange={props.practiceHandleChange}
                         deletePractice={props.deletePractice}/>}
                     />
                     <Route
