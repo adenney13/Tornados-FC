@@ -1,9 +1,20 @@
 body {
     text-align: center;
+    align-content: center;
+    align-items: center;
+    
+}
+
+table {
+    margin: 0 auto;
 }
 
 a {
-    display: inline-block
+    display: inline-block;
+    font-size: 25px;
+    color:black;
+    text-shadow: red 1px 1px;
+
 }
 
 li {

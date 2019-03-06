@@ -7,11 +7,10 @@ const PracticesAdmin = (props) => {
     console.log(props.practices)
     return(
         <Router>
-        <div>
-        {props.practices.map(practice => {
-            return <p key={practice.id}>{practice.team.name} at {practice.field.name} on {practice.date} from {practice.time} <br /> <button>Edit</button><button value = {practice.id} onClick= {props.deletePractice}>Delete</button></p>
-        })}
+        <div className='practicesAdmin'>
         <Link to='/practices-admin-create'><button>Create New Practice</button></Link>
+            <br />
+            <br />
             <Route
                 path='/practices-admin-create'
                 render={() => < PracticesAdminCreate 
@@ -28,6 +27,30 @@ const PracticesAdmin = (props) => {
                
                 />}
             />
+
+            <table border= '3'>
+                <thead>
+                <tr>
+                    <th>Team</th>
+                    <th>Field</th>
+                    <th>Date</th>
+                    <th>Time</th>
+                    <th>Edit</th>
+                    <th>Delete</th>
+                </tr>
+                </thead>
+                <tbody>
+        {props.practices.map(practice => {
+            return <tr key={practice.id}><td>{practice.team.name}</td> 
+            <td>{practice.field.name}</td> 
+            <td>{practice.date}</td> 
+            <td>{practice.time}</td> 
+            <td><button>Edit</button></td>
+            <td><button value = {practice.id} onClick= {props.deletePractice}>Delete</button></td>
+            </tr>
+        })}
+         </tbody>
+         </table>
         </div>
         </Router>
     )

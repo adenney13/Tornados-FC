@@ -18,8 +18,8 @@ console.log(props.playerHandleChange)
                         <li><Link to='/practices-admin'>Practices</Link></li>
                         <li><Link to='/rosters-admin'>Rosters</Link></li>
                         <li><Link to='/teams-admin'>Teams</Link></li>
-                        <li><Link to='/clubs-admin'>Clubs</Link></li>
-                        <li><Link to='/'>Home</Link></li> 
+                        
+                         
                     </ul>
                 </nav>
                 <main>

@@ -143,6 +143,7 @@ class Landing extends Component {
             console.log(body)
             console.log(createNewTeam)
         } catch (err) {console.log(err)}
+        this.getRefreshedData() 
     }
 
     editTeam = async () => {
@@ -151,7 +152,8 @@ class Landing extends Component {
 
     deleteTeam = async (e) => {
         console.log(e.target.value)
-        await axios.delete('/teams', e.target.value)
+        await axios.delete(`/teams/${e.target.value}`)
+        this.getRefreshedData()
     }
 
     createPlayer = async () => {
@@ -168,6 +170,7 @@ class Landing extends Component {
         console.log(body)
         console.log(createNewPlayer)
         } catch (err) {console.log(err)}
+        this.getRefreshedData()
     }
 
     editPlayer = async () => {
@@ -194,6 +197,7 @@ class Landing extends Component {
         console.log(body)
         console.log(createNewPractice)
         } catch (err) {console.log(err)}
+        this.getRefreshedData()
     }
 
     editPractice = async () => {
@@ -221,6 +225,7 @@ class Landing extends Component {
         console.log(body)
         console.log(createNewGame)
         } catch (err) {console.log(err)}
+        this.getRefreshedData()
     }
     
 
@@ -378,7 +383,6 @@ class Landing extends Component {
                         <li><Link to='/practices'>Practices</Link></li>
                         <li><Link to='/rosters'>Rosters</Link></li>
                         <li><Link to='/teams'>Teams</Link></li>
-                        <li><Link to='/clubs'>Clubs</Link></li>
                         <li><Link to='/admin'>Admin</Link></li> 
                     </ul>
                 </nav>

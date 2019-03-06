@@ -4,18 +4,30 @@ const Games = (props) => {
     console.log(props.games)
     return(
         <div className='games'>
-             {props.games.map(game => {
+         <table border= '3'>
+         <thead>
+              <tr>
+                <th>Date</th>
+                <th>Time</th>
+                <th>Home Team</th>
+                <th>Away Team</th>
+                <th>Field</th>
+              </tr>
+            </thead>
+            <tbody>
+            {props.games.map(game => {
                 return (
-                    <div key={game.id}>
-                    <p >Date: {game.date} Time: {game.time}</p>
-                    <p >{game.home_teams.name} vs {game.away_teams.name} @ {game.field.name} </p>
-                    <br />
-                    </div>
+                    <tr key={game.id}>
+                    <td>{game.date}</td><td>{game.time}</td>
+                    <td>{game.home_teams.name}</td>  <td>{game.away_teams.name}</td> <td>{game.field.name} </td>
+                    </tr>
                 )
             })}
-           
+            </tbody>
+             
+            </table>
         </div>
     )
 }
-
+ 
 export default Games
