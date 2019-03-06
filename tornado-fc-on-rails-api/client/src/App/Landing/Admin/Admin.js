@@ -11,7 +11,7 @@ console.log(props.playerHandleChange)
     return (
         <Router>
         <div className= 'admin_landing'>
-                Admin Landing page links here!
+                <h2 className='adminHeading'>Welcome Back, Admin!</h2>
                 <nav>
                     <ul>
                         <li><Link to='/games-admin'>Games</Link></li>

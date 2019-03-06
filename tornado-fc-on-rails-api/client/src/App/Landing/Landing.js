@@ -8,6 +8,7 @@ import Clubs from './Clubs/Clubs'
 import Admin from './Admin/Admin'
 import { Route, Link } from 'react-router-dom'
 import '../../App/style.css'
+import teamPic from '../../Assets/IMG_1673.JPG'
 
 class Landing extends Component {
     constructor () {
@@ -367,7 +368,10 @@ class Landing extends Component {
         
         return(
             <div className= 'landing'>
-                Landing page links here!
+               
+                <img src= {teamPic} alt='the team' className='landingPic'/>
+                <br />
+                <h2 className='landingHeading'> Welcome to Tornados FC!</h2>
                 <nav>
                     <ul>
                         <li><Link to='/games'>Games</Link></li>

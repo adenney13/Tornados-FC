@@ -1,7 +1,21 @@
 body {
-    text-align: left;
+    text-align: center;
+}
+
+a {
+    display: inline-block
+}
+
+li {
+    display: inline-block;
+    padding: 2em
 }
 
 ul {
     display: inline
+}
+
+.landingPic {
+    max-width: 1024px;
+    max-height: 400px;
 }
