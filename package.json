@@ -1,0 +1,24 @@
+{
+  "name": "tornado-fc-on-rails-api",
+  "version": "1.0.0",
+  "description": "This README would normally document whatever steps are necessary to get the application up and running.",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "dependencies": {
+    "axios": "^0.18.0",
+    "react": "^16.8.3",
+    "react-router-dom": "^4.3.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://git.generalassemb.ly/adenney13/project-4.git"
+  },
+  "author": "",
+  "license": "ISC"
+}
