@@ -376,7 +376,7 @@ class Landing extends Component {
                
                 <img src= {teamPic} alt='the team' className='landingPic'/>
                 <br />
-                <h2 className='landingHeading'> Welcome to Fuck It Off FC!</h2>
+                <h2 className='landingHeading'> Welcome to Tornados FC!</h2>
                 <nav>
                     <ul>
                         <li><Link to='/games'>Games</Link></li>
