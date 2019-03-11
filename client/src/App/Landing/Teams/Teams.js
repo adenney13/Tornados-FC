@@ -4,6 +4,7 @@ const Teams = (props) => {
  console.log(props.teams)
     return(
         <div className ="Teams">
+          <h1>Choose your team!</h1>
          <table border= '3'>
             <thead>
               <tr>
