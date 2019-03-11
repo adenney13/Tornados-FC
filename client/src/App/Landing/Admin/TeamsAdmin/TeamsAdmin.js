@@ -48,7 +48,7 @@ const TeamsAdmin = (props) => {
        
             {props.teams.map(team => {
                 return <tr key={team.id}><td>{team.name}</td> 
-                <td><Link to='/teams-admin-edit'><button>Edit</button></Link></td>
+                {/* <td><Link to='/teams-admin-edit'><button>Edit</button></Link></td> */}
                 <td><button value = {team.id} onClick={props.deleteTeam}>Delete</button></td>
                 </tr>
             })}
